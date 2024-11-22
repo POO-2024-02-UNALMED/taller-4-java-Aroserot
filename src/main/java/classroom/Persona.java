@@ -4,13 +4,9 @@ public class Persona {
 
     public long cedula; //se quita el final
     public String nombre;
-    public static int totalPersonas;
+    public static int totalPersonas=0;
     //se elimina ya que genera problemas y no es necesario
-    public Persona(){     //Faltaba el constructor sin parametros
-        this.cedula = 0;
-        this.nombre = "";
-        totalPersonas++;
-    }
+    public Persona(){}    //Faltaba el constructor sin parametros
 
     public Persona(long cedula, String nombre) {
         this.cedula = cedula;
