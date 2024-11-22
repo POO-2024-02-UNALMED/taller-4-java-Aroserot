@@ -10,8 +10,13 @@ public class Asignatura {
 
     public Asignatura() {
         this("Sin nombre",Tipo.FUNDAMENTACION);
+        //this(0);
     }
-//Se elimina ya que se considera repetido y no es necesario para el resultado pues se imprime el codigo externo
+
+    //public Asignatura(int codigoInterno,Tipo tipo) {
+    //    this("Sin nombre", codigoInterno, 0,tipo);
+    //}
+
     public Asignatura(int codigoExterno,Tipo tipo) {
         this("Sin nombre", 0, codigoExterno,tipo);
     }
@@ -33,7 +38,11 @@ public class Asignatura {
         this.nombre = nombre;
         this.tipo = tipo;
     }
-//Se elimina ya que se considera repetido y no es necesario para el resultado pues se imprime el codigoExterno
+
+    //public void cambiarDatos(int codigoInterno) {
+    //    this.codigoInterno = codigoInterno;
+    //}
+
     public void cambiarDatos(int codigoExterno) {
         this.codigoExterno = codigoExterno;
     }
