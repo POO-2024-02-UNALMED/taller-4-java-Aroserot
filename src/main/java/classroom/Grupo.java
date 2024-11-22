@@ -5,7 +5,7 @@ public class Grupo {
     public Persona[] estudiantes;
     public Persona profesor;
     public Asignatura asignatura;
-    public final int codigo = 0;
+    public int codigo = 0; //Quito el final para que se pueda asignar un valor diferente
     public String horario;
 
     public Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
@@ -17,8 +17,9 @@ public class Grupo {
     }
 
     public Grupo(int cantidadEstudiantes, Persona profesor, Asignatura asignatura, int codigo, String horario) {
-        Persona[] personas = new Persona[cantidadEstudiantes];
-        this(personas, profesor, asignatura, codigo, horario);
+        this(new Persona[cantidadEstudiantes], profesor, asignatura, codigo, horario);
+        //el this debe ser la primera linea en un "metodo"
+        //se crea dentro para que reconozca el constructor
     }
 
     public Grupo(Persona[] estudiantes, Persona profesor, Asignatura asignatura) {

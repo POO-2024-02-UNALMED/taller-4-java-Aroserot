@@ -2,13 +2,14 @@ package classroom;
 
 public class Persona {
 
-    final long cedula;
-    String nombre;
-    static int totalPersonas;
-    
-    static {
-        totalPersonas = 0;
-        cedula = 3;
+    public long cedula; //se quita el final
+    public String nombre;
+    public static int totalPersonas;
+    //se elimina ya que genera problemas y no es necesario
+    public Persona(){     //Faltaba el constructor sin parametros
+        this.cedula = 0;
+        this.nombre = "";
+        totalPersonas++;
     }
 
     public Persona(long cedula, String nombre) {
